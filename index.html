@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio Web de César García">
+  <title>César | Frontend Developer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Configuración de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: {
+              '50': '#faf5ff',
+              '100': '#f3e8ff',
+              '200': '#e9d5ff',
+              '300': '#d8b4fe',
+              '400': '#c084fc',
+              '500': '#a855f7',
+              '600': '#9333ea',
+              '700': '#7e22ce',
+              '800': '#6b21a8',
+              '900': '#581c87',
+              '950': '#3b0764',
+            },
+            zinc: {
+              '50': '#fafafa',
+              '100': '#f4f4f5',
+              '200': '#e4e4e7',
+              '300': '#d4d4d8',
+              '400': '#a1a1aa',
+              '500': '#71717a',
+              '600': '#52525b',
+              '700': '#3f3f46',
+              '800': '#27272a',
+              '900': '#18181b',
+              '950': '#09090b',
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Shorcut -->
+  <link rel="shortcut icon" href="src/img/letra-c.png">
+  <!-- CSS Prereload -->
+  <link rel="preload" href="/src/css/styles.css" as="stylesheet">
+  <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body class="min-h-screen bg-black text-white">
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-5 bg-transparent">
+    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold flex items-center gap-2">
+        <span class="text-purple-500">César</span> García
+      </a>
+      
+      <nav class="hidden md:flex gap-6">
+        <a href="#sobre-mi" class="hover:text-purple-400 transition-colors">Sobre mí</a>
+        <a href="#proyectos" class="hover:text-purple-400 transition-colors">Proyectos</a>
+        <a href="#habilidades" class="hover:text-purple-400 transition-colors">Habilidades</a>
+        <a href="#educacion" class="hover:text-purple-400 transition-colors">Educación</a>
+      </nav>
+      
+      <button id="mobile-menu-btn" class="md:hidden text-white">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden">
+    <button id="close-menu-btn" class="absolute top-5 right-5 text-white">
+      <i data-lucide="x" class="h-6 w-6"></i>
+    </button>
+    <nav class="flex flex-col gap-8 text-center">
+      <a href="#sobre-mi" class="text-xl hover:text-purple-400 transition-colors">Sobre mí</a>
+      <a href="#proyectos" class="text-xl hover:text-purple-400 transition-colors">Proyectos</a>
+      <a href="#habilidades" class="text-xl hover:text-purple-400 transition-colors">Habilidades</a>
+      <a href="#educacion" class="text-xl hover:text-purple-400 transition-colors">Educación</a>
+    </nav>
+  </div>
+
+  <!-- Discord-style Profile Section -->
+  <section id="sobre-mi" class="pt-24 pb-16">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="animate-fade-in bg-zinc-900 rounded-lg overflow-hidden">
+        <!-- Banner -->
+        <div class="h-32 bg-gradient-to-r from-purple-900 to-purple-600 relative">
+          <!-- Status indicator - top right -->
+          <div class="absolute top-4 right-4 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
+            <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+            <span class="text-xs font-medium">Online</span>
+          </div>
+        </div>
+        
+        <!-- Profile content -->
+        <div class="px-6 pb-6">
+          <!-- Avatar -->
+          <div class="relative -mt-12 mb-4 flex justify-between items-end">
+            <div class="relative">
+              <div class="w-24 h-24 rounded-full bg-zinc-900 border-4 border-zinc-900 overflow-hidden">
+                <img 
+                  src="/src/img/IMG_3160.JPG" 
+                  alt="César García" 
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="absolute bottom-0 right-0 w-6 h-6 bg-zinc-900 rounded-full flex items-center justify-center p-1">
+                <div class="w-full h-full bg-green-500 rounded-full"></div>
+              </div>
+            </div>
+            
+            <a href="/src/pdf/resumen.pdf" target="_blank" class="border border-purple-500 text-purple-500 hover:bg-purple-500/10 px-3 py-1 rounded-md text-sm flex items-center">
+              <i data-lucide="download" class="h-4 w-4 mr-2"></i> Descargar CV
+            </a>
+          </div>
+          
+          <!-- Name and badges -->
+          <div class="mb-4">
+            <div class="flex items-center gap-2 mb-1">
+              <h1 class="text-xl font-bold">César García</h1>
+              <div class="bg-purple-500 text-white text-xs font-bold px-1.5 py-0.5 rounded">DEV</div>
+            </div>
+            <a href="https://www.instagram.com/cgamcs/" target="_blank" class="text-purple-400">@cgamcs</a>
+          </div>
+          
+          <hr class="my-4 border-zinc-800" />
+          
+          <!-- About section -->
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase text-zinc-400 mb-2">SOBRE MÍ</h3>
+            <p class="text-sm text-zinc-300">
+              Estudio una Ingeniería en Tecnología de Software desde 2021, especializado en desarrollo frontend. 
+              Actualmente curso 7º semestre de mi carrera y estoy en busca de oportunidades de trabajo o prácticas 
+              profesionales para aplicar mis conocimientos en el diseño de software y desarrollo de interfaces de usuario.
+            </p>
+          </div>
+          
+          <hr class="my-4 border-zinc-800" />
+          
+          <!-- Member since -->
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase text-zinc-400 mb-2">MIEMBRO DESDE</h3>
+            <div class="flex items-center gap-2 text-sm text-zinc-300">
+              <i data-lucide="calendar" class="h-4 w-4 text-purple-400"></i>
+              <span>10 de octubre de 2021</span>
+            </div>
+          </div>
+          
+          <hr class="my-4 border-zinc-800" />
+          
+          <!-- Social links -->
+          <div>
+            <h3 class="text-xs font-bold uppercase text-zinc-400 mb-2">CONEXIONES</h3>
+            <div class="flex gap-3">
+              <a href="https://github.com/cgamcs" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 p-2 rounded-full transition-colors">
+                <i data-lucide="github" class="h-5 w-5"></i>
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/cgamcs/" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 p-2 rounded-full transition-colors">
+                <i data-lucide="linkedin" class="h-5 w-5"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="proyectos" class="py-16 bg-zinc-950">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="animate-fade-in mb-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Mis <span class="text-purple-500">Proyectos</span></h2>
+        <p class="text-zinc-400 max-w-2xl mx-auto">
+          Una selección de los proyectos en los que he trabajado, demostrando mis habilidades en desarrollo frontend.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Proyecto 1 -->
+        <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden h-full flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img
+              src="/src/img/administrar.webp"
+              alt="Proyecto 1"
+              class="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          <div class="p-5 flex-grow flex flex-col">
+            <div class="flex gap-2 mb-3">
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">React</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">Tailwind</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">NodeJS</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Administrador de Citas</h3>
+            <p class="text-zinc-400 mb-4 flex-grow text-sm">
+              He desarrollado una aplicación web dinámica en React y JavaScript, complementada con el diseño visual de Tailwind CSS. La aplicación usa un sistema de autenticación completo y una interfaz de usuario reactiva y fácil de usar.
+            </p>
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/cgamcs/apv_frontend_deploy" class="border border-zinc-700 hover:border-purple-500 hover:text-purple-400 px-3 py-1 rounded-md text-sm flex items-center">
+                <i data-lucide="github" class="h-4 w-4 mr-2"></i> Código
+              </a>
+              <a href="https://agendavet.netlify.app/" class="border border-zinc-700 hover:border-purple-500 hover:text-purple-400 px-3 py-1 rounded-md text-sm flex items-center">
+                <i data-lucide="external-link" class="h-4 w-4 mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 2 -->
+        <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden h-full flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img
+              src="/src/img/mirys.webp"
+              alt="Proyecto 2"
+              class="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          <div class="p-5 flex-grow flex flex-col">
+            <div class="flex gap-2 mb-3">
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">JavaScript</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Viajes & Tours Mirys</h3>
+            <p class="text-zinc-400 mb-4 flex-grow text-sm">
+              Pagina estática enfocada en promocionar los próximos viajes y los beneficios de la agencia, con una sección integrada de reseñas para generar confianza entre los usuarios.
+            </p>
+            <div class="flex gap-3 mt-auto">
+              <a href="https://mirys.vercel.app/" class="border border-zinc-700 hover:border-purple-500 hover:text-purple-400 px-3 py-1 rounded-md text-sm flex items-center">
+                <i data-lucide="external-link" class="h-4 w-4 mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 3 -->
+        <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden h-full flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img
+              src="/src/img/simulacion.webp"
+              alt="Proyecto 3"
+              class="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          <div class="p-5 flex-grow flex flex-col">
+            <div class="flex gap-2 mb-3">
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 px-2 py-1 rounded-full text-xs font-medium">JavaScript</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Simulación Horario</h3>
+            <p class="text-zinc-400 mb-4 flex-grow text-sm">
+              Ofrece el horario más optimizado y personalizado, según las materias, los horarios disponibles y el historial académico del usuario
+            </p>
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/cgamcs/horarioEscolar" class="border border-zinc-700 hover:border-purple-500 hover:text-purple-400 px-3 py-1 rounded-md text-sm flex items-center">
+                <i data-lucide="github" class="h-4 w-4 mr-2"></i> Código
+              </a>
+              <a href="https://simulacion-horario.vercel.app/" class="border border-zinc-700 hover:border-purple-500 hover:text-purple-400 px-3 py-1 rounded-md text-sm flex items-center">
+                <i data-lucide="external-link" class="h-4 w-4 mr-2"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="habilidades" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="animate-fade-in mb-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Mis <span class="text-purple-500">Habilidades</span></h2>
+        <p class="text-zinc-400 max-w-2xl mx-auto">
+          Tecnologías y herramientas con las que trabajo para crear experiencias web modernas y atractivas.
+        </p>
+      </div>
+      
+      <div class="w-full max-w-3xl mx-auto">
+        <!-- Tabs -->
+        <div class="grid grid-cols-3 mb-6 bg-zinc-900 rounded-md overflow-hidden">
+          <button class="tab-trigger active py-2 px-4 flex items-center justify-center gap-2" data-tab="frontend">
+            <i data-lucide="code" class="h-4 w-4"></i> Frontend
+          </button>
+          <button class="tab-trigger py-2 px-4 flex items-center justify-center gap-2" data-tab="design">
+            <i data-lucide="monitor" class="h-4 w-4"></i> Diseño
+          </button>
+          <button class="tab-trigger py-2 px-4 flex items-center justify-center gap-2" data-tab="tools">
+            <i data-lucide="layers" class="h-4 w-4"></i> Herramientas
+          </button>
+        </div>
+        
+        <!-- Tab Content: Frontend -->
+        <div id="frontend-tab" class="tab-content active grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <!-- Skill items for Frontend -->
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">HTML</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">CSS</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">JavaScript</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">TypeScript</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">React</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Node.js</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Tailwind CSS</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="code" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">SASS</h3>
+          </div>
+        </div>
+        
+        <!-- Tab Content: Design -->
+        <div id="design-tab" class="tab-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <!-- Skill items for Design -->
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="monitor" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">UI/UX</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="monitor" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Responsive Design</h3>
+          </div>
+        </div>
+        
+        <!-- Tab Content: Tools -->
+        <div id="tools-tab" class="tab-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <!-- Skill items for Tools -->
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Git</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">GitHub</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Cursor</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Terminal</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Postman</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">NPM</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Vercel</h3>
+          </div>
+          <div class="animate-scale-in bg-zinc-900 border border-zinc-800 rounded-lg p-4 text-center hover:border-purple-500 transition-colors">
+            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="layers" class="h-5 w-5 text-purple-400"></i>
+            </div>
+            <h3 class="font-medium text-sm">Netlify</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="educacion" class="py-16 bg-zinc-950">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="animate-fade-in mb-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Mi <span class="text-purple-500">Educación</span></h2>
+        <p class="text-zinc-400 max-w-2xl mx-auto">
+          Formación académica, cursos y certificaciones que he completado para mejorar mis habilidades.
+        </p>
+      </div>
+      
+      <div class="grid gap-6">
+        <!-- Main Education -->
+        <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-purple-500/20 p-3 rounded-full">
+              <i data-lucide="book-open" class="h-6 w-6 text-purple-400"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-1">Ingeniería en Tecnología de Software</h3>
+              <p class="text-purple-400 mb-2">Universidad Tecnológica • 2021 - Presente</p>
+              <p class="text-zinc-400 text-sm">
+                Actualmente cursando el 7º semestre de la carrera, con enfoque en desarrollo frontend y diseño de interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certificates -->
+        <h3 class="text-xl font-bold mt-6 mb-4">Certificaciones</h3>
+        <div class="grid gap-4">
+          <!-- Certificate 1 -->
+          <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="bg-purple-500/20 p-2 rounded-full">
+                <i data-lucide="award" class="h-5 w-5 text-purple-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Desarrollo Web Completo</h4>
+                <div class="flex items-center gap-2 mb-2">
+                  <p class="text-purple-400 text-sm">Udemy</p>
+                  <span class="text-zinc-600">•</span>
+                  <p class="text-zinc-400 text-sm">2022</p>
+                </div>
+                <p class="text-zinc-400 text-sm">HTML, CSS, JavaScript, PHP, MySQL, WordPress</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificate 2 -->
+          <div class="animate-fade-in bg-zinc-900 border border-zinc-800 rounded-lg p-5">
+            <div class="flex items-start gap-4">
+              <div class="bg-purple-500/20 p-2 rounded-full">
+                <i data-lucide="award" class="h-5 w-5 text-purple-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">JavaScript Moderno</h4>
+                <div class="flex items-center gap-2 mb-2">
+                  <p class="text-purple-400 text-sm">Udemy</p>
+                  <span class="text-zinc-600">•</span>
+                  <p class="text-zinc-400 text-sm">2024</p>
+                </div>
+                <p class="text-zinc-400 text-sm">Node.js, Vue.js Express, Mongodb, React</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 border-t border-zinc-900">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <p class="text-zinc-400 text-sm">© César García - <span id="current-year"></span></p>
+        <div class="flex space-x-4">
+          <a href="https://www.linkedin.com/in/cgamcs/" target="_blank" class="text-zinc-400 hover:text-purple-400 transition-colors">
+            <i data-lucide="linkedin" class="h-5 w-5"></i>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://github.com/cgamcs" target="_blank" class="text-zinc-400 hover:text-purple-400 transition-colors">
+            <i data-lucide="github" class="h-5 w-5"></i>
+            <span class="sr-only">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+   <script src="/src/js/app.js"></script>
+</body>
+</html>
