@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Activar el primer tab por defecto (frontend)
-  activateTab('frontend');
+  // Activar el primer tab por defecto (desarrollo)
+  activateTab('desarrollo');
 });
 
 // Agregar estas clases CSS al proyecto
