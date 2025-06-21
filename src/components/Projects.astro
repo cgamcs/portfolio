@@ -4,12 +4,12 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects')
 
 // Debug: ver los datos de cada proyecto
-projects.forEach(project => {
-	console.log(`Proyecto: ${project.data.title}`)
-	console.log('Demo:', project.data.demo)
-	console.log('Code:', project.data.code)
-	console.log('---')
-})
+// projects.forEach(project => {
+// 	console.log(`Proyecto: ${project.data.title}`)
+// 	console.log('Demo:', project.data.demo)
+// 	console.log('Code:', project.data.code)
+// 	console.log('---')
+// })
 
 // Renderizar el contenido de cada proyecto
 const renderedProjects = await Promise.all(
