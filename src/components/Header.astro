@@ -1,0 +1,29 @@
+---
+import { House, Linkedin, Github, ScrollText } from '@lucide/astro';
+---
+
+<header class="w-fit fixed top-0 z-100">
+    <nav class="border border-zinc-300 bg-white/80 backdrop-blur-sm rounded-2xl mt-3 p-2 flex items-center text-zinc-700">
+        <a class="ml-4" href="#inicio" aria-label="Inicio">
+            <House class="hover:opacity-50 transition-opacity" />
+        </a>
+
+        <div class="w-px h-5 bg-zinc-300 mx-6"></div>
+
+        <div class="flex items-center gap-7">
+            <a target="_blank" href="https://github.com/cgamcs" aria-label="GitHub">
+                <Github class="hover:opacity-50 transition-opacity" >
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/cgamcs/" aria-label="LinkedIn">
+                <Linkedin class="hover:opacity-50 transition-opacity" />
+            </a>
+            <a target="_blank" href="https://cgamcs.hashnode.dev/" aria-label="Blog">
+                <ScrollText class="hover:opacity-50 transition-opacity" />
+            </a>
+        </div>
+
+        <div class="w-px h-5 bg-zinc-300 mx-6"></div>
+        
+        <a class="bg-black shadow-lg hover:opacity-80 px-8 py-3 rounded-2xl text-white" href="mailto:cesar.garciamcs@gmail.com" aria-label="Email">Contacto</a>
+    </nav>
+</header>

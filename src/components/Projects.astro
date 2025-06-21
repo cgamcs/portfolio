@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects')
+
+// Debug: ver los datos de cada proyecto
+projects.forEach(project => {
+	console.log(`Proyecto: ${project.data.title}`)
+	console.log('Demo:', project.data.demo)
+	console.log('Code:', project.data.code)
+	console.log('---')
+})
+
+// Renderizar el contenido de cada proyecto
+const renderedProjects = await Promise.all(
+	projects.map(async (project) => {
+		const { Content } = await project.render();
+		return { ...project, Content };
+	})
+)
+---
+
+<div class="mt-20">
+    <section class="container">
+        <h2 class="text-xl md:text-2xl font-bold mb-5 fade-in-up">Proyectos</h2>
+
+        <div class="flex flex-col gap-5">
+            {renderedProjects.map((project, index) => {
+                const { data } = project
+                const { title, img, demo, code } = data
+
+                return (
+                    <div class="flex flex-col md:flex-row gap-3 fade-in-up" style={`transition-delay: ${index * 0.1}s`}>
+                        <img class="md:w-1/2 rounded-lg shadow-md" src={`/${img}`} alt={`Imagen del proyecto ${title}`} />
+
+                        <div class="md:w-1/2 h-full space-y-2">
+                            <h3 class="text-lg md:text-xl font-bold">{title}</h3>
+
+                            <p class="text-zinc-600 leading-relaxed">
+                                <project.Content />
+                            </p>
+
+                            <div class="flex gap-3">
+                                {demo && (
+                                    <a
+                                        class="bg-black hover:opacity-80 hover:cursor-pointer transition px-6 py-2 text-white text-sm rounded-lg"
+                                        href={demo}
+                                        target="_blank"
+                                    >Demo</a>
+                                )}
+                                {code && (
+                                    <a
+                                        class="bg-black hover:opacity-80 hover:cursor-pointer transition px-6 py-2 text-white text-sm rounded-lg"
+                                        href={code}
+                                        target="_blank"
+                                    >Código</a>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    </section>
+</div>

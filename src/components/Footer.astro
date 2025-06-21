@@ -1,0 +1,19 @@
+---
+import { Github, Linkedin, Mail } from "@lucide/astro";
+---
+
+<footer class="flex justify-between items-center w-full px-8 md:px-0 mt-20 mb-10 text-zinc-700">
+    <p class="text-lg">© César García - <span id="current-year">{new Date().getFullYear()}</span></p>
+
+    <div class="flex space-x-4">
+        <a href="https://www.linkedin.com/in/cgamcs/" target="_blank" class="hover:opacity-50 transition-opacity" aria-label="LinkedIn">
+            <Linkedin />
+        </a>
+        <a href="https://github.com/cgamcs" target="_blank" class="hover:opacity-50 transition-opacity" aria-label="GitHub">
+            <Github />
+        </a>
+        <a href="mailto:cesar.garciamcs@gmail.com" target="_blank" class="hover:opacity-50 transition-opacity" aria-label="Email">
+            <Mail />
+        </a>
+    </div>
+</footer>

@@ -1,0 +1,35 @@
+---
+import '../styles/global.css'
+
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Portafolio Web de César García">
+		<link rel="icon" type="image/svg+xml" href="/mcicon.png" />
+		<title>{title}</title>
+		<ClientRouter />
+	</head>
+	<body>
+		<div class="flex flex-col max-w-2xl mx-auto items-center justify-center">
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background: #fffffc;
+	}
+</style>
