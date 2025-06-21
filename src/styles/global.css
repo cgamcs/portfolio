@@ -3,6 +3,19 @@
 
 @tailwind utilities;
 
+/* Configure dark mode to use class-based toggling */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.theme-btn.active {
+  background-color: rgb(228 228 231); /* bg-zinc-200 */
+  color: rgb(24 24 27); /* text-zinc-900 */
+}
+
+html.dark .theme-btn.active {
+  background-color: rgb(63 63 70); /* dark:bg-zinc-700 */
+  color: rgb(244 244 245); /* dark:text-zinc-100 */
+}
+
 /* Animaciones de entrada */
 @keyframes fadeInUp {
   from {
@@ -70,4 +83,23 @@
 
 .delay-400 {
   transition-delay: 0.8s;
+}
+
+/* Custom pulse animation */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }

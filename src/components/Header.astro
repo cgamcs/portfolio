@@ -3,12 +3,12 @@ import { House, Linkedin, Github, ScrollText, Mail } from '@lucide/astro';
 ---
 
 <header class="w-fit fixed top-0 z-100 px-2 md:px-0">
-    <nav class="border border-zinc-300 bg-white/80 backdrop-blur-sm rounded-2xl mt-3 p-2 flex items-center text-zinc-700">
+    <nav class="border border-zinc-300 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl mt-3 p-2 flex items-center text-zinc-700 dark:text-zinc-700">
         <a class="ml-4" href="https://cgamcs.vercel.app/" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" aria-label="Inicio">
             <House class="hover:opacity-50 transition-opacity" />
         </a>
 
-        <div class="w-px h-5 bg-zinc-300 mx-6"></div>
+        <div class="w-px h-5 bg-zinc-300 dark:bg-zinc-800 mx-6"></div>
 
         <div class="flex items-center gap-7">
             <a target="_blank" href="https://github.com/cgamcs" aria-label="GitHub">
@@ -22,7 +22,7 @@ import { House, Linkedin, Github, ScrollText, Mail } from '@lucide/astro';
             </a>
         </div>
 
-        <div class="w-px h-5 bg-zinc-300 mx-6"></div>
+        <div class="w-px h-5 bg-zinc-300 dark:bg-zinc-800 mx-6"></div>
         
         <a class="bg-black shadow-lg hover:opacity-80 px-5 md:px-8 py-3 rounded-2xl text-zinc-50" href="mailto:cesar.garciamcs@gmail.com" aria-label="Email">
             <span class="hidden md:block">Contacto</span>

@@ -7,43 +7,50 @@ import Footer from '../components/Footer.astro';
 
 <Layout title='César | Developer'>
 	<Header />
-	<main class="px-8 md:px-0  flex flex-col">
+	<main class="px-8 md:px-0 flex flex-col">
 		<div class="flex flex-col gap-7 pt-30 md:pt-45">
-			<img class="w-25 h-25 fade-in-up" src="/icon.webp" srcset="/icon.webp 1x, /icon@2x.png 2x"  alt="Imagen de perfil">
+			<img class="w-25 h-25 fade-in-up" src="/icon.webp" srcset="/icon.webp 1x, /icon@2x.png 2x" alt="Imagen de perfil">
 		
 			<div class="flex flex-col gap-5 fade-in-up delay-100">
-				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">Hola, soy César. <br> Estudiante de ingeniería <br> de software.</h1>
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-zinc-100">
+					Hola, soy César. <br> Estudiante de ingeniería <br> de software.
+				</h1>
 		
-				<p class="text-zinc-600 text-base md:text-lg leading-relaxed">
-				  Apasionado por la tecnología y el aprendizaje continuo. Actualmente enfocado en JavaScript y en seguir de cerca la evolución de la inteligencia artificial.
+				<p class="text-zinc-600 dark:text-zinc-400 text-base md:text-lg leading-relaxed">
+					Apasionado por la tecnología y el aprendizaje continuo. Actualmente enfocado en JavaScript y en seguir de cerca la evolución de la inteligencia artificial.
 				</p>
 			</div>
 		
-			<div class="bg-red-100 py-3 px-6 rounded-full w-fit fade-in-up delay-200">
+			<div class="bg-red-100 dark:bg-red-900/30 py-3 px-6 rounded-full w-fit fade-in-up delay-200">
 				<div class="flex gap-3 items-center justify-center">
 					<div class="relative inline-flex">
 						<!-- Círculo verde fijo -->
-						<div class="rounded-full bg-red-700 h-[8px] w-[8px] z-10">
-						</div>
+						<div class="rounded-full bg-red-700 dark:bg-red-500 h-[8px] w-[8px] z-10"></div>
 					  
 						<!-- Círculo pulsante -->
-						<div class="absolute rounded-full bg-red-700 h-[8px] w-[8px] animate-pulse-custom opacity-50"></div>
+						<div class="absolute rounded-full bg-red-700 dark:bg-red-500 h-[8px] w-[8px] animate-ping opacity-50"></div>
 					</div>
 
-					<div class="text-red-700">En practicas</div>
+					<div class="text-red-700 dark:text-red-400">En practicas</div>
 				</div>
-			</>
+			</div>
 		</div>
 
 		<div class="mt-20 fade-in-up delay-300">
 			<section class="container">
-				<h2 class="text-xl md:text-2xl font-bold mb-5">Sobre mí</h2>
+				<h2 class="text-xl md:text-2xl font-bold mb-5 text-zinc-900 dark:text-zinc-100">Sobre mí</h2>
 		
-				<p class="w-full mb-5 text-zinc-600 leading-relaxed">Soy estudiante de Ingeniería en Tecnología de Software desde 2021, actualmente en 8.º semestre. Me especializo en desarrollo frontend y recientemente inicié mis prácticas profesionales, donde trabajo con tecnologías como .NET y JavaScript.</p>
+				<p class="w-full mb-5 text-zinc-600 dark:text-zinc-400 leading-relaxed">
+					Soy estudiante de Ingeniería en Tecnología de Software desde 2021, actualmente en 8.º semestre. Me especializo en desarrollo frontend y recientemente inicié mis prácticas profesionales, donde trabajo con tecnologías como .NET y JavaScript.
+				</p>
 		
-				<p class="w-full mb-5 text-zinc-600 leading-relaxed">He completado el certificado <strong>CS50's Introduction to Computer Science de Harvard</strong>, lo que fortaleció mi base en fundamentos de programación, algoritmos y estructuras de datos.</p>
+				<p class="w-full mb-5 text-zinc-600 dark:text-zinc-400 leading-relaxed">
+					He completado el certificado <strong class="text-zinc-800 dark:text-zinc-200">CS50's Introduction to Computer Science de Harvard</strong>, lo que fortaleció mi base en fundamentos de programación, algoritmos y estructuras de datos.
+				</p>
 		
-				<p class="w-full mb-5 text-zinc-600 leading-relaxed">Busco seguir creciendo como desarrollador aplicando mis conocimientos en diseño de software e interfaces centradas en el usuario.</p>
+				<p class="w-full mb-5 text-zinc-600 dark:text-zinc-400 leading-relaxed">
+					Busco seguir creciendo como desarrollador aplicando mis conocimientos en diseño de software e interfaces centradas en el usuario.
+				</p>
 			</section>
 		</div>
 
@@ -51,26 +58,7 @@ import Footer from '../components/Footer.astro';
 	</main>
 
 	<Footer />
-
-
 </Layout>
-
-<style>
-		@keyframes pulse-custom {
-	  0%, 100% {
-		transform: scale(1);
-		opacity: 0.5;
-	  }
-	  50% {
-		transform: scale(1.8);
-		opacity: 0;
-	  }
-	}
-  
-	.animate-pulse-custom {
-	  animation: pulse-custom 1.5s infinite;
-	}
-</style>
 
 <script>
 	// Intersection Observer para animaciones de entrada
