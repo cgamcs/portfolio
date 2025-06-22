@@ -1,0 +1,13 @@
+---
+interface Props {
+    code: string;
+}
+
+const { code } = Astro.props;
+---
+
+<a
+    class="bg-black hover:opacity-80 hover:cursor-pointer transition px-6 py-2 text-white text-sm rounded-lg"
+    href={code}
+    target="_blank"
+>Código</a> 

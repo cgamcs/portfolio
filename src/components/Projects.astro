@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import DemoButton from './DemoButton.astro';
+import CodeButton from './CodeButton.astro';
 
 const projects = await getCollection('projects')
 
@@ -41,20 +43,8 @@ const renderedProjects = await Promise.all(
                             </div>
 
                             <div class="flex gap-3">
-                                {demo && (
-                                    <a
-                                        class="bg-black hover:opacity-80 hover:cursor-pointer transition px-6 py-2 text-white text-sm rounded-lg"
-                                        href={demo}
-                                        target="_blank"
-                                    >Demo</a>
-                                )}
-                                {code && (
-                                    <a
-                                        class="bg-black hover:opacity-80 hover:cursor-pointer transition px-6 py-2 text-white text-sm rounded-lg"
-                                        href={code}
-                                        target="_blank"
-                                    >Código</a>
-                                )}
+                                {demo && <DemoButton demo={demo} />}
+                                {code && <CodeButton code={code} />}
                             </div>
                         </div>
                     </div>
