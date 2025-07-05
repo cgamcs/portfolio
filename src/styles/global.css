@@ -6,6 +6,11 @@
 /* Configure dark mode to use class-based toggling */
 @custom-variant dark (&:where(.dark, .dark *));
 
+::selection {
+  background-color: oklch(44.2% 0.017 285.786);
+  color: #fff;
+}
+
 .theme-btn.active {
   background-color: rgb(228 228 231); /* bg-zinc-200 */
   color: rgb(24 24 27); /* text-zinc-900 */
@@ -74,15 +79,15 @@ html.dark .theme-btn.active {
 }
 
 .delay-200 {
-  transition-delay: 0.4s;
-}
-
-.delay-300 {
   transition-delay: 0.6s;
 }
 
-.delay-400 {
+.delay-300 {
   transition-delay: 0.8s;
+}
+
+.delay-400 {
+  transition-delay: 1s;
 }
 
 /* Custom pulse animation */
