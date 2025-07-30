@@ -8,12 +8,14 @@ import Footer from '../components/Footer.astro';
 <Layout title='César | Developer'>
 	<Header />
 	<main class="px-8 md:px-0 flex flex-col">
-		<div class="flex flex-col gap-7 pt-30 2xl:pt-45">
-			<img class="w-25 h-25 rounded-full  fade-in-up" src="/icon.webp" srcset="/icon.webp 1x, /icon@2x.jpg 2x" alt="Imagen de perfil">
+		<div class="flex flex-col gap-8 pt-30 2xl:pt-45">
+			<div class="w-full fade-in-up">
+				<img class="w-25 h-25 rounded-full" src="/icon.webp" srcset="/icon.webp 1x, /icon@2x.jpg 2x" alt="Imagen de perfil">
+			</div>
 		
-			<div class="flex flex-col gap-5 fade-in-up delay-100">
-				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-zinc-100">
-					Hola, soy César. <br> Estudiante de ingeniería <br> de software.
+			<div class="flex flex-col gap-4 fade-in-up delay-100">
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight lg:leading-[1.15] text-zinc-900 dark:text-zinc-100">
+					Hola, soy César. <br> Ingeniero de software.
 				</h1>
 		
 				<p class="text-zinc-600 dark:text-zinc-300 text-base md:text-lg leading-relaxed">
@@ -22,6 +24,8 @@ import Footer from '../components/Footer.astro';
 			</div>
 		
 			<div class="flex gap-5 fade-in-up delay-200">
+				<a href="/pdf/resumen.pdf" target="_blank" class="bg-black dark:bg-zinc-800 rounded-2xl flex justify-center items-center px-6 py-3 text-zinc-50 dark:text-zinc-300 shadow-lg hover:opacity-80 min-h-full">Descargar CV</a>
+
 				<div class="bg-red-100 dark:bg-red-900/30 py-3 px-6 rounded-full w-fit">
 					<div class="flex gap-3 items-center justify-center">
 						<div class="relative inline-flex">
@@ -35,8 +39,6 @@ import Footer from '../components/Footer.astro';
 						<div class="text-red-700 dark:text-red-400 select-none">En practicas</div>
 					</div>
 				</div>
-
-				<a href="/pdf/resumen.pdf" target="_blank" class="bg-black dark:bg-zinc-800 rounded-full flex justify-center items-center px-6 py-3 text-zinc-50 dark:text-zinc-300 shadow-lg hover:opacity-80 min-h-full">Descargar CV</a>
 			</div>
 		</div>
 
