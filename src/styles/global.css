@@ -6,6 +6,12 @@
 /* Configure dark mode to use class-based toggling */
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-background: #151516;
+  --color-border: #666666;
+  --color-card: #262626
+}
+
 ::selection {
   background-color: oklch(44.2% 0.017 285.786);
   color: #fff;

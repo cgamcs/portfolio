@@ -1,5 +1,6 @@
 ---
 title: UniPlanner
+tech: javascript, css
 img: simulacion.webp
 demo: https://simulacion-horario.vercel.app/
 code: https://github.com/cgamcs/horarioEscolar

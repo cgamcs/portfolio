@@ -6,10 +6,10 @@ import { Sun, Moon, Monitor } from "@lucide/astro";
     <p class="text-lg">© César García - <span id="current-year">{new Date().getFullYear()}</span></p>
 
     <!-- Theme Switcher -->
-    <div class="flex items-center space-x-1 bg-zinc-100 dark:bg-[#262626] rounded-full p-1">
+    <div class="flex items-center space-x-1 bg-zinc-100 dark:bg-card rounded-full p-1">
         <button
             id="theme-light"
-            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-[#262626]"
+            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-card"
             data-theme="light"
             title="Modo claro"
         >
@@ -17,7 +17,7 @@ import { Sun, Moon, Monitor } from "@lucide/astro";
         </button>
         <button
             id="theme-dark"
-            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-[#262626]"
+            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-card"
             data-theme="dark"
             title="Modo oscuro"
         >
@@ -25,7 +25,7 @@ import { Sun, Moon, Monitor } from "@lucide/astro";
         </button>
         <button
             id="theme-system"
-            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-[#262626]"
+            class="theme-btn p-2 rounded-full transition-all duration-200 hover:bg-zinc-200 dark:hover:bg-card"
             data-theme="system"
             title="Modo sistema"
         >
