@@ -23,14 +23,44 @@ const SobreMi = () => {
 
       <div className="flex gap-6 mb-5">
         <ul className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li>- JavaScript</li>
-          <li>- NodeJS</li>
-          <li>- Express</li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            JavaScript
+          </li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            NodeJS
+          </li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            Express
+          </li>
         </ul>
         <ul className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li>- PHP</li>
-          <li>- SQL</li>
-          <li>- Git</li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            PHP
+          </li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            SQL
+          </li>
+          <li className="relative pl-6">
+            <span className="absolute left-0 top-[6px] text-violet-400 text-xs">
+              ▹
+            </span>
+            Git
+          </li>
         </ul>
       </div>
 
