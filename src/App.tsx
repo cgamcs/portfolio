@@ -167,7 +167,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="max-w-5xl mx-auto py-12 flex justify-between">
+      <footer className="max-w-5xl mx-auto py-12 px-6 flex justify-between">
         <p>
           © César García - <span>{new Date().getFullYear()}</span>
         </p>

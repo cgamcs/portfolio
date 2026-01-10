@@ -49,7 +49,7 @@ export default function ExperienciaLista() {
 
   return (
     <div className="flex flex-col md:flex-row gap-5 md:gap-0 w-full">
-      <div className="flex flex-col gap-2 md:h-54 border-l-2 md:border-l-0 md:border-r border-[#121212] md:pr-4">
+      <div className="flex flex-col gap-2 md:h-60 border-l-2 md:border-l-0 md:border-r border-[#121212] md:pr-4">
         {menuItems.map((item) => {
           const isActive = activeTab === item.id;
 
