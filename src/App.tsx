@@ -128,7 +128,7 @@ export default function App() {
               <SobreMi />
 
               <div className="hidden md:block w-64 aspect-[3/4] rounded-lg overflow-hidden shadow-lg mx-auto">
-                <img src="/IMG_0668_Original.jpg" alt="" className="w-92" />
+                <img src="/pfp.jpg" alt="" className="w-92" />
               </div>
             </div>
           </FadeIn>
