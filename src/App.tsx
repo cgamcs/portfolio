@@ -1,8 +1,8 @@
 import { FadeIn } from "@/components/ui/fade-in";
 import { DotScreenShader } from "@/components/ui/dot-shader-background";
-import ExperienciaLista from "./components/ExperienciaLista";
-import ProyectosTarjeta from "./components/ProyectosTarjeta";
-import SobreMi from "./components/SobreMI";
+import SobreMi from "@/components/SobreMi";
+import ExperienciaLista from "@/components/ExperienciaLista";
+import ProyectosTarjeta from "@/components/ProyectosTarjeta";
 import { Github, Linkedin } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
