@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react"
+import { motion, AnimatePresence } from "motion/react"
 
 // 1. Definimos los datos fuera del componente para mantener el código limpio
 const experienceData = {
@@ -48,7 +48,7 @@ export default function ExperienciaLista() {
   const content = experienceData[activeTab];
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:gap-0 w-full">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-0 min-w-3xl">
       <div className="flex flex-col gap-2 md:h-64 border-l-2 md:border-l-0 md:border-r border-[#121212] md:pr-4">
         {menuItems.map((item) => {
           const isActive = activeTab === item.id;

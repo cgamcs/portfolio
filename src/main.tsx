@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import './index.css'
-import { ThemeProvider } from 'next-themes'
+import Router from './router'
+import { ThemeProvider } from './utils/ThemeContext'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      <App />
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <ThemeProvider>
+      <Router />
     </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 )
