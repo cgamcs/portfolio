@@ -8,7 +8,7 @@ function Header() {
           className="text-black dark:text-white"
         >César García</Link>
         
-        <span className='text-[#63635E] dark:text-gray-400'>Software Engineer</span>
+        <span className='-mt-1.5 text-indigo-600 dark:text-indigo-400'>Software Engineer</span>
     </header>
   )
 }
