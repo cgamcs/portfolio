@@ -4,10 +4,12 @@ import MainView from "./views/MainView"
 import ViakableView from "./views/ViakableView"
 import ProfescoreView from "./views/ProfescoreView"
 import UanlView from "./views/UanlView"
+import ScrollToTop from "./components/ScrollToTop"
 
 export default function Router() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route>
           <Route path="/" element={<App />}>
