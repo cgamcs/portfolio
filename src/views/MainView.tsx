@@ -3,26 +3,6 @@ import Marquee from "../components/Marquee";
 import { Link } from "react-router-dom";
 
 function MainView() {
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("visible");
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-  //   );
-
-  //   const animatedElements = document.querySelectorAll(".fade-in-up, .fade-in");
-  //   console.log("Elementos encontrados:", animatedElements.length);
-  //   animatedElements.forEach((el) => observer.observe(el));
-
-  //   // Cleanup al desmontar el componente
-  //   return () => observer.disconnect();
-  // }, []); // [] = solo se ejecuta una vez al montar
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,20 +15,13 @@ function MainView() {
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
 
-    const elements = document.querySelectorAll(".fade-in-up, .fade-in");
-    elements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      // Si ya está en el viewport al cargar, agregarlo visible sin animación
-      if (rect.top < window.innerHeight) {
-        el.classList.add("no-transition");
-        el.classList.add("visible");
-      } else {
-        observer.observe(el);
-      }
-    });
+    const animatedElements = document.querySelectorAll(".fade-in-up, .fade-in");
+    console.log("Elementos encontrados:", animatedElements.length);
+    animatedElements.forEach((el) => observer.observe(el));
 
+    // Cleanup al desmontar el componente
     return () => observer.disconnect();
-  }, []);
+  }, []); // [] = solo se ejecuta una vez al montar
 
   return (
     <>
@@ -126,7 +99,7 @@ function MainView() {
           </div>
         </section>
 
-        <section className="-mb-3 mt-16 sm:mt-32 fade-in-up delay-300">
+        <section className="-mb-3 mt-16 sm:mt-32 fade-in-up">
           <h2 className="font-medium text-black dark:text-white mb-5 sm:mb-6">
             Experiencia
           </h2>
@@ -173,7 +146,7 @@ function MainView() {
           </div>
         </section>
 
-        <section className="-mb-3 mt-16 sm:mt-32">
+        <section className="-mb-3 mt-16 sm:mt-32 fade-in-up">
           <h2 className="font-medium text-black dark:text-white mb-5 sm:mb-6">
             Más información
           </h2>

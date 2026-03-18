@@ -143,10 +143,6 @@ body {
   opacity: 1;
 }
 
-/* .no-transition {
-  transition: none !important;
-} */
-
 /* Delays para animaciones escalonadas */
 .delay-100 {
   transition-delay: 0.4s;
