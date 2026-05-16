@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom"
+
 function ProfescoreView() {
   return (
     <>
+      <Link to="/" className="inline-flex items-center gap-1 pt-30 mb-8 text-sm text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors no-underline">
+        ← Volver
+      </Link>
+
       <p className="text-lg/7 mb-6.5"><strong>Tecnologías clave:</strong> React, TypeScript, Express, Axios, Tailwind CSS, JWT, MongoDB y varias librerías de componentes UI.</p>
 
       <p className="text-lg/7 text-black dark:text-white mb-4">Visión y objetivo</p>
@@ -68,7 +74,7 @@ function ProfescoreView() {
 
       <ul className="list-disc pl-4 mb-6.5">
         <li className="mb-1">
-          <strong>Adopción temprana:</strong> Cerca de 2,000 usuarios activos en el primeros día de lanzamiento.
+          <strong>Adopción temprana:</strong> Cerca de 2,000 usuarios activos en el primer día de lanzamiento.
         </li>
 
         <li className="mb-1">
@@ -77,12 +83,12 @@ function ProfescoreView() {
       </ul>
 
       <p className="text-lg/7 text-black dark:text-white mb-4">
-        Enfoque y estilo de trabajo
+        Próximos pasos
       </p>
 
       <ul className="list-disc pl-4">
         <li className="mb-1">
-          Añadir <strong>analítica avanzada</strong> on dashboards interactivos (Chart.js/D3).
+          Añadir <strong>analítica avanzada</strong> en dashboards interactivos (Chart.js/D3).
         </li>
 
         <li className="mb-1">

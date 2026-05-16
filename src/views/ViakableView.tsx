@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom"
 
 function ViakableView() {
   return (
     <>
+      <Link to="/" className="inline-flex items-center gap-1 pt-30 mb-8 text-sm text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors no-underline">
+        ← Volver
+      </Link>
+
       <p className="text-lg/7 mb-6.5">
         Como practicante en el equipo de desarrollo, mi día a día gira en torno a <strong>optimizar y enriquecer las interfaces de usuario</strong> de nuestras aplicaciones web, combinando tecnologías como <strong>JavaScript, HTML, CSS, Progress 4GL/ABL y WebSpeed</strong>.
       </p>
@@ -20,7 +25,7 @@ function ViakableView() {
         </li>
 
         <li className="mb-1">
-          <strong>Calidad y pruebas:</strong> antes de cerrar cualquier ticket, realizo pruebas en el entorno de desarrollo Linux y/o Windows parar verificar la correcta visualización y funcionalidad en los navegadores objetivo.
+          <strong>Calidad y pruebas:</strong> antes de cerrar cualquier ticket, realizo pruebas en el entorno de desarrollo Linux y/o Windows para verificar la correcta visualización y funcionalidad en los navegadores objetivo.
         </li>
       </ul>
 

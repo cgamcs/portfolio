@@ -42,13 +42,13 @@ function MainView() {
           </h2>
 
           <p className="text-lg/7">
-            Practicante de Ingeniería de Software en Viakable. Construyo
-            aplicaciones web con JavaScript y Progress enfocadas en interfaces
-            limpias y funcionales.
+            Estudiante de Ingeniería en Software en UANL y practicante en
+            Viakable. Construyo interfaces web con React y TypeScript, ya
+            tengo una plataforma en producción con más de 2,000 usuarios activos.
           </p>
 
           <p className="text-lg/7 mt-4 mb-16">
-            Me gusta programar y ver peliculas.
+            Me gusta programar y ver películas.
           </p>
 
           <section
@@ -69,32 +69,32 @@ function MainView() {
               href="https://www.profescore.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
-              <h3 className="text-black dark:text-white">ProfeScore</h3>
-              <span>Plataforma para evaluar profesores.</span>
+              <h3 className="text-black font-semibold dark:text-white">ProfeScore</h3>
+              <span>Plataforma full-stack para evaluación docente anónima. +2,000 usuarios el día de lanzamiento.</span>
             </a>
 
             <a
               href="https://simulacion-horario.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
-              <h3 className="text-black dark:text-white">
+              <h3 className="text-black font-semibold dark:text-white">
                 Simulación de Horario
               </h3>
-              <span>Aplicación para simular horarios de clases.</span>
+              <span>Herramienta para planificar horarios universitarios y detectar conflictos antes de inscribirte.</span>
             </a>
 
             <a
               href="https://control-gastos-smoky.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
-              <h3 className="text-black dark:text-white">Control de Gastos</h3>
-              <span>Aplicación para controlar gastos personales.</span>
+              <h3 className="text-black font-semibold dark:text-white">Control de Gastos</h3>
+              <span>App para registrar, categorizar y visualizar gastos personales.</span>
             </a>
           </div>
         </section>
@@ -107,7 +107,7 @@ function MainView() {
           <div className="flex flex-col gap-7 sm:gap-4">
             <Link
               to="/experiencia/viakable"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
               <h3 className="text-black dark:text-white">
                 Software Engineer (Prácticas) @{" "}
@@ -120,7 +120,7 @@ function MainView() {
 
             <Link
               to="/experiencia/profescore"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
               <h3 className="text-black dark:text-white">
                 Lead Developer & Founder @{" "}
@@ -133,7 +133,7 @@ function MainView() {
 
             <Link
               to="/experiencia/uanl"
-              className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
+              className="-mx-3 flex flex-col rounded-xl px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-[#222221] sm:py-3"
             >
               <h3 className="text-black dark:text-white">
                 Estudiante de Ingeniería de Software @{" "}

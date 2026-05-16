@@ -1,13 +1,14 @@
 import { Github, House, Linkedin, Mail, ScrollText } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function Header() {
   return (
     <>
       <header className="w-fit fixed top-0 z-100 px-2 md:px-0">
         <nav className="border border-zinc-300 dark:border-[#383939] bg-white/80 dark:bg-[#0E0D0B]/70 backdrop-blur-sm rounded-2xl mt-3 p-2 flex items-center text-zinc-700 dark:text-[#7d7d7d]">
-            <a className="ml-4" href="https://cgamcs.vercel.app/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} aria-label="Inicio">
+            <Link className="ml-4" to="/" aria-label="Inicio">
                 <House className="hover:opacity-50 transition-opacity" />
-            </a>
+            </Link>
 
             <div className="w-px h-5 bg-zinc-300 dark:bg-[#383939] mx-6"></div>
 

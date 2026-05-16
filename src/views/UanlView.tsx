@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom"
 
 function UanlView() {
   return (
     <>
+      <Link to="/" className="inline-flex items-center gap-1 pt-30 mb-8 text-sm text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors no-underline">
+        ← Volver
+      </Link>
+
       <p className="text-lg/7 mb-6.5">
         Actualmente curso la <strong>Ingeniería en Tecnología de Software</strong> en la Facultad de Ingeniería Mecánica y Eléctrica (FIME) de la Universidad Autónoma de Nuevo León. El programa está orientado a formar profesionales capaces de diseñar, desarrollar y gestionar soluciones de software complejas, combinando fundamentos teóricos sólidos con experiencias prácticas en proyectos reales.
       </p>
@@ -31,7 +36,7 @@ function UanlView() {
       </ul>
 
       <p className="text-lg/7 text-black dark:text-white mb-4">
-        Proyectos destacados
+        Materias cursadas
       </p>
 
       <ul className="list-disc pl-4 mb-6.5">
