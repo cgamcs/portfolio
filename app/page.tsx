@@ -42,7 +42,7 @@ export default function Home() {
                     document still needs one top-level heading. */}
                 <h1 className="text-18/6.25 font-medium text-text">César García</h1>
                 <p className="text-14/5 text-secondary">
-                  Software Engineering Intern
+                  Software Engineer
                 </p>
               </span>
             </header>

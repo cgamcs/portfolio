@@ -76,7 +76,7 @@ export default function Footer() {
 
   return (
     <footer className="flex justify-between items-center w-full px-8 md:px-0 my-20 text-secondary">
-      <p className="text-14/5">© César García {new Date().getFullYear()}</p>
+      <p className="text-14/5">© César García - {new Date().getFullYear()}</p>
 
       <div className="relative flex items-center rounded-full border border-border bg-control p-0.5">
         {/* Sliding pill that follows the active option. The buttons are a fixed
