@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* Class-based dark mode toggling, driven by the theme switcher in the footer. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Single source of truth for the page colours. Tailwind turns each
+   --color-* token into a utility, so `bg-surface` / `bg-background` below
+   and the html rules underneath always resolve to the same value. */
+@theme {
+  --color-surface: #fafaf9;
+  --color-background: #0E0E0E;
+  --color-border: #e7e7e5;
+  --color-card: #fff;
+  --color-control: #fff;
+  --color-control-active: #ECECEA;
+
+  /* Text. Tailwind emits these as var() references, so redefining them under
+     html.dark below re-colours every text-text / text-body / text-secondary
+     utility at once - no dark: variant needed on any of them. */
+  --color-text: #191919;
+  --color-body: #4d4d4d;
+  --color-secondary: #757575;
+
+  /* Numeric font-size scale, so text-14 / text-15 work like the spacing
+     utilities do. Tailwind has no numeric text-* scale out of the box. */
+  --text-14: 14px;
+  --text-18: 18px;
+
+  /* Same curve the base transition below uses, so ease-(--ease) matches
+     the rest of the site. */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* next/font injects --font-geist as "Geist, Geist Fallback". */
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+}
+
+/* The body paints over the html, so html only shows through in the overscroll
+   area. Both read the same token to stop the two from drifting apart. */
+html {
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+}
+
+html.dark {
+  background: var(--color-background);
+
+  --color-border: #262626;
+  --color-card: #111;
+  --color-control: #131313;
+  --color-control-active: #202020;
+  --color-text: #ededed;
+  --color-body: #b6b6b6;
+  --color-secondary: #9c9c9c;
+}
+
+::selection {
+  background-color: oklch(44.2% 0.017 285.786);
+  color: #fff;
+}
+
+/* Reveal start state, applied at parse time so above-the-fold content never
+   flashes before GSAP's layout effect runs. Gated on the `js` class set by the
+   inline boot script: without JavaScript nothing is ever hidden. GSAP's inline
+   styles take over from here. */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+/* Smooth colour changes when the theme flips.
+   Layered into `base` on purpose: unlayered rules outrank every @layer, so
+   leaving this outside a layer silently overrode Tailwind's own transition-*
+   utilities (transition-transform stopped working). */
+@layer base {
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
