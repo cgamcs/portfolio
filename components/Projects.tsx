@@ -46,7 +46,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`${project.title} repository`}
-                  className="relative z-10 shrink-0 rounded-lg border border-border px-4 py-2 text-14/5 text-text transition-colors duration-200 ease-(--ease) hover:bg-control-active"
+                  className="bg-black dark:bg-control-active relative z-10 shrink-0 rounded-lg border border-border px-4 py-2 text-14/5 text-white transition-colors duration-200 ease-(--ease) hover:bg-control-active"
                 >
                   Code
                 </a>

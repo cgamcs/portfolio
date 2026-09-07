@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
 
       <main className="px-8 md:px-0 flex flex-col">
-        <div className="flex flex-col gap-8 pt-15 md:pt-25">
+        <div className="flex flex-col gap-8 pt-20 md:pt-25">
           <div
             className="flex w-full flex-col gap-8"
             data-reveal="0"
