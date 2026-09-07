@@ -83,7 +83,7 @@ export default function Footer() {
             26px with no gap between them, so one step is exactly 100%. */}
         <span
           aria-hidden="true"
-          className="absolute left-0.5 top-0.5 size-[26px] rounded-full bg-control-active transition-transform duration-300 ease-(--ease)"
+          className="absolute left-0.5 top-0.5 size-6.5 rounded-full bg-control-active transition-transform duration-300 ease-(--ease)"
           style={{ transform: `translateX(${activeIndex * 100}%)` }}
         />
 
@@ -95,7 +95,7 @@ export default function Footer() {
             aria-label={title}
             aria-pressed={theme === value}
             onClick={() => selectTheme(value)}
-            className={`relative z-10 grid size-[26px] place-items-center rounded-full transition-colors duration-200 ease-(--ease) ${
+            className={`relative z-10 grid size-6.5 place-items-center rounded-full transition-colors duration-200 ease-(--ease) ${
               theme === value ? "text-text" : ""
             }`}
           >
