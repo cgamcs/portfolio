@@ -25,7 +25,7 @@ export default function Home() {
             className="flex w-full flex-col gap-8"
             data-reveal="0"
           >
-            <header className="group flex w-full items-center gap-3.5">
+            <header className="group flex w-full items-center gap-3.5" data-reveal="0">
               <span className="relative size-11 shrink-0 overflow-hidden rounded-full bg-surface outline-1 -outline-offset-1 outline-border">
                 <Image
                   src="/pfp.png"
@@ -48,13 +48,13 @@ export default function Home() {
             </header>
 
             <div className="flex flex-col gap-4">
-              <p className="text-body text-18/6.25 text-pretty">
+              <p className="text-body text-18/6.25 text-pretty" data-reveal="0.1">
                 Build and maintain web applications at Viakable for the Quality,
                 Production Floor, and Operations teams, using Progress 4GL and
                 WebSpeed across Unix and Windows environments.
               </p>
 
-              <div className="flex gap-5">
+              <div className="flex gap-5" data-reveal="0.2">
                 <a
                   href="/resume.pdf"
                   target="_blank"
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20" data-reveal="0">
+        <div className="mt-20" data-reveal="0.3">
           <section className="container">
             <h2 className="text-xl md:text-2xl mb-5 text-secondary">
               about me
@@ -124,7 +124,7 @@ export default function Home() {
                 <li
                   key={technology}
                   // Sequenced after the 0.5s reveal on the section above.
-                  data-reveal={0.65 + index * 0.07}
+                  data-reveal={0.30 + index * 0.04}
                   className="group flex items-center gap-2"
                 >
                   <span

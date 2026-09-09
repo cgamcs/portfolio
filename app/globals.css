@@ -10,6 +10,7 @@
   --color-surface: #fafaf9;
   --color-background: #0E0E0E;
   --color-border: #e7e7e5;
+  --color-soft: #eeeeec;
   --color-card: #fff;
   --color-control: #fff;
   --color-control-active: #ECECEA;
@@ -44,7 +45,8 @@ html {
 html.dark {
   background: var(--color-background);
 
-  --color-border: #262626;
+  --color-border: #242424;
+  --color-soft: #1e1e1e;
   --color-card: #111;
   --color-control: #131313;
   --color-control-active: #202020;

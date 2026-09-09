@@ -6,7 +6,7 @@ const LINK = "transition-opacity duration-200 ease-(--ease) hover:opacity-50";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-100 w-fit px-2 md:px-0">
+    <header className="fixed top-0 z-100 w-fit px-2 md:px-0" data-reveal="0">
       <nav className="mt-3 flex items-center gap-4 rounded-full border border-border bg-white/80 p-1.5 pl-4 text-secondary backdrop-blur-sm dark:bg-background/70">
         <a href="#top" aria-label="Home">
           <House size={ICON} className={LINK} />

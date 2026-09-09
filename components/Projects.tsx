@@ -13,7 +13,7 @@ export default function Projects() {
             <li
               key={project.title}
               data-reveal={index * 0.1}
-              className="relative flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-colors duration-200 ease-(--ease) hover:border-secondary"
+              className="relative flex items-center justify-between gap-4 rounded-xl border border-soft bg-card p-4 transition-colors duration-200 ease-(--ease) hover:border-border"
             >
               <div className="flex flex-col gap-1">
                 <h3 className="text-15/5 font-medium text-text">
@@ -46,7 +46,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`${project.title} repository`}
-                  className="bg-black dark:bg-control-active relative z-10 shrink-0 rounded-lg border border-border px-4 py-2 text-14/5 text-white transition-colors duration-200 ease-(--ease) hover:bg-control-active"
+                  className="bg-black dark:bg-control-active relative z-10 shrink-0 rounded-lg border border-border px-4 py-2 text-14/5 text-white transition-colors duration-200 ease-(--ease) hover:opacity-75"
                 >
                   Code
                 </a>
